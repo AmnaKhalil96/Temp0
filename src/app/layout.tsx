@@ -1,6 +1,22 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/Navbar";
+import Footer from "@/components/footer";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Hero from "@/components/hero";
+import Contact from "@/components/contact";
+import BlogGrid from "@/components/blog";
+import Cart from "@/components/cart";
+import Checkout from "@/components/checkout";
+import Display from "@/components/display";
+import { Feather } from "lucide-react";
+import InstagramBanner from "@/components/insta";
+import MyAccount from "@/components/Account";
+import ProductDetails from "@/components/productpageMid";
+import ProductGridList from "@/components/product";
+// import ProductDetails from "@/components/productpageMid";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +43,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <NavBar />
+        <Hero />
+        <Contact />
+        <BlogGrid />
+        <Cart />
+        <Checkout />
+        <Display />
+        <Feather />
+        <InstagramBanner />
+        <MyAccount />
+     {/* <MyAccount /> */}
+     <ProductGridList />
+     {/* < ProductGridList /> */}
+     <ProductDetails />
+     {/* < ProductpageMid /> */}
         {children}
+        <Footer />
       </body>
     </html>
   );
